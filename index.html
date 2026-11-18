@@ -244,6 +244,19 @@
       .comp-entry p.trio { color: var(--ink); margin-top: 14px; }
       .comp-entry p.trio b { color: var(--amber); font-weight: 600; }
 
+      .watch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 800px; }
+      .watch-card { margin: 0; }
+      .watch-card video {
+        display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover;
+        background: #000; border: 1px solid var(--line); border-radius: 14px;
+      }
+      .watch-card figcaption { padding-top: 18px; }
+      .watch-series { font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--glow); }
+      .watch-series.amber { color: var(--amber); }
+      .watch-card h3 { font-weight: 800; font-size: 1.55rem; line-height: 1.12; letter-spacing: -0.015em; margin-top: 8px; }
+      .watch-card .latin { color: var(--glow); font-size: 0.98rem; margin-top: 4px; }
+      .watch-card figcaption p.fact { margin-top: 10px; color: var(--soft); font-size: 0.97rem; max-width: 26em; }
+
       .notes { margin-top: 64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
       .note { background: var(--deep); border-radius: 14px; overflow: hidden; }
       .note figure { margin: 0; }
@@ -297,6 +310,7 @@
         section.dark { padding: 64px 0; }
         .travel { padding: 64px 0 72px; }
         .travel-grid, .series-detail, .drops { grid-template-columns: 1fr; }
+        .watch-grid { grid-template-columns: 1fr; max-width: 380px; }
         .tcard img { aspect-ratio: 16 / 10; }
         .hero-links { display: none; }
         .hero-nav { padding: 18px 20px; }
@@ -330,6 +344,7 @@
         </a>
         <div class="hero-links">
           <a href="#series">Series</a>
+          <a href="#watch">Watch</a>
           <a href="#weird">Creatures</a>
           <a href="#wonders">Compilations</a>
           <a href="#schedule">Schedule</a>
@@ -434,7 +449,39 @@
         </div>
       </section>
 
-      <section class="dark" id="weird" aria-labelledby="weird-h" style="padding-top: 72px;">
+      <!-- 4) WATCH — videos playing on this page -->
+      <section class="dark" id="watch" aria-labelledby="watch-h" style="padding-top: 72px;">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="sec-tag">Watch</p>
+            <h2 class="sec-title" id="watch-h">Two videos, playing right here</h2>
+            <p>No trip to Facebook needed. Press play and watch them on this page, sound and all, in the same vertical format they were posted in.</p>
+          </div>
+
+          <div class="watch-grid">
+            <figure class="watch-card">
+              <video controls preload="none" playsinline poster="https://weirdocean.github.io/videos/humpback-whale.jpg" src="https://weirdocean.github.io/videos/humpback-whale.mp4" aria-label="Video: a freediver swimming alongside a humpback whale"></video>
+              <figcaption>
+                <p class="watch-series amber">From Ocean Wonders</p>
+                <h3>Humpback Whale</h3>
+                <p class="latin">Megaptera novaeangliae</p>
+                <p class="fact">A freediver holds position beside a humpback, close enough to feel how small a person is next to fifteen metres of whale. One breath, no tank, and the whale decides how long the meeting lasts.</p>
+              </figcaption>
+            </figure>
+            <figure class="watch-card">
+              <video controls preload="none" playsinline poster="https://weirdocean.github.io/videos/great-barracuda.jpg" src="https://weirdocean.github.io/videos/great-barracuda.mp4" aria-label="Video: a great barracuda hunting over a coral reef"></video>
+              <figcaption>
+                <p class="watch-series">From Weird Ocean</p>
+                <h3>Great Barracuda</h3>
+                <p class="latin">Sphyraena barracuda</p>
+                <p class="fact">A great barracuda hunting over the reef: over a metre of silver muscle that hangs almost motionless, watching, until it doesn&rsquo;t. The strike is faster than the eye following it.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark" id="weird" aria-labelledby="weird-h">
         <div class="wrap">
           <div class="sec-head">
             <p class="sec-tag">From Weird Ocean</p>
