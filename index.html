@@ -244,7 +244,7 @@
       .comp-entry p.trio { color: var(--ink); margin-top: 14px; }
       .comp-entry p.trio b { color: var(--amber); font-weight: 600; }
 
-      .watch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 800px; }
+      .watch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1120px; }
       .watch-card { margin: 0; }
       .watch-card video {
         display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover;
@@ -454,7 +454,7 @@
         <div class="wrap">
           <div class="sec-head">
             <p class="sec-tag">Watch</p>
-            <h2 class="sec-title" id="watch-h">Two videos, playing right here</h2>
+            <h2 class="sec-title" id="watch-h">Three videos, playing right here</h2>
             <p>No trip to Facebook needed. Press play and watch them on this page, sound and all, in the same vertical format they were posted in.</p>
           </div>
 
@@ -475,6 +475,15 @@
                 <h3>Great Barracuda</h3>
                 <p class="latin">Sphyraena barracuda</p>
                 <p class="fact">A great barracuda hunting over the reef: over a metre of silver muscle that hangs almost motionless, watching, until it doesn&rsquo;t. The strike is faster than the eye following it.</p>
+              </figcaption>
+            </figure>
+            <figure class="watch-card">
+              <video controls preload="none" playsinline poster="https://weirdocean.github.io/videos/king-mackerel.jpg" src="https://weirdocean.github.io/videos/king-mackerel.mp4" aria-label="Video: a king mackerel hunting in open water"></video>
+              <figcaption>
+                <p class="watch-series">From Weird Ocean</p>
+                <h3>King Mackerel</h3>
+                <p class="latin">Scomberomorus cavalla</p>
+                <p class="fact">A king mackerel at full stretch: a streamlined hunter of the western Atlantic that travels in schools and hits baitfish so hard it sometimes leaves the water entirely. Built for speed, and it shows.</p>
               </figcaption>
             </figure>
           </div>
